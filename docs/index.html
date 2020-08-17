@@ -5,12 +5,13 @@
   <title>Vue Tutorial</title>
 </head>
 <body>
-  <header>
+  <!-- <header>
     <h1>My app</h1>
-  </header>
+  </header> -->
   
   <div id="app">
-    {{ message }}
+    <P>{{ message }}</P>
+    <input type="text" v-model="message">
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
