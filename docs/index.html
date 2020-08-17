@@ -8,7 +8,9 @@
   
   <div id="app">
     <P>{{ message }}</P>
-    <input type="text" v-model="message">
+    <form>
+      <p><input type="text" v-model="message"></p>
+    </form>
   </div>
 
   <div id="app-2">
@@ -17,6 +19,10 @@
         {{data.text}}
       </li>
     </ul>
+  </div>
+
+  <div id="app-3">
+    <span v-if="seen">Now you see me</span>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
