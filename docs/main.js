@@ -5,13 +5,18 @@ var app = new Vue({
   }
 })
 
+Vue.component("test",{
+  props: ["data"],
+  template: "<li> {{ data.text }}</li>"
+})
+
 var app2 = new Vue({
   el: '#app-2',
-  data: {
+  data:{
     datas: [
-      { text: "data1"},
-      { text: "data2"},
-      { text: "data3"}
+      { id: 1, text: "data1"},
+      { id: 2, text: "data2"},
+      { id: 3, text: "data3"}
     ]
   }
 })

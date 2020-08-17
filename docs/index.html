@@ -7,7 +7,8 @@
 <body>
   
   <div id="app">
-    <P>{{ message }}</P>
+    <!-- <P>{{ message }}</P> -->
+    <p v-html="message"></p>
     <form>
       <p><input type="text" v-model="message"></p>
     </form>
@@ -15,9 +16,18 @@
 
   <div id="app-2">
     <ul>
-      <li v-for="data in datas">
+      <!-- <li v-for="data in datas">
         {{data.text}}
-      </li>
+      </li> -->
+      <!-- <li> {{ datas[0].text }} </li>
+      <li> {{ datas[1].text }} </li>
+      <li> {{ datas[2].text }} </li> -->
+
+      <test 
+        v-for="data in datas"
+        v-bind:data="data"
+        v-bind:key="data.id"
+      ></test>
     </ul>
   </div>
 
