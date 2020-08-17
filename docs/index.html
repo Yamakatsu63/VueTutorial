@@ -5,13 +5,18 @@
   <title>Vue Tutorial</title>
 </head>
 <body>
-  <!-- <header>
-    <h1>My app</h1>
-  </header> -->
   
   <div id="app">
     <P>{{ message }}</P>
     <input type="text" v-model="message">
+  </div>
+
+  <div id="app-2">
+    <ul>
+      <li v-for="data in datas">
+        {{data.text}}
+      </li>
+    </ul>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>

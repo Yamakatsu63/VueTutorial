@@ -4,3 +4,14 @@ var app = new Vue({
     message: 'Hello!'
   }
 })
+
+var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    datas: [
+      { text: "data1"},
+      { text: "data2"},
+      { text: "data3"}
+    ]
+  }
+})
