@@ -20,5 +20,10 @@ var app3 = new Vue({
   el: "#app-3",
   data:{
     seen: false
+  },
+  methods:{
+    showMessage: function(){
+      this.seen = !this.seen
+    }
   }
 })
