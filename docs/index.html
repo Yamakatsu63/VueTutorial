@@ -34,28 +34,26 @@
   </header>
   
   <div id="app">
-    <!-- <P>{{ message }}</P> -->
-    <p v-html="message"></p>
-    <form>
-      <p><input type="text" v-model="message"></p>
-    </form>
-  </div>
-
-  <div id="app-2">
     <ul>
-      <!-- <li v-for="data in datas">
-        {{data.text}}
-      </li> -->
+      <li v-for="i in datas">
+        {{i.data}}
+      </li>
       <!-- <li> {{ datas[0].text }} </li>
       <li> {{ datas[1].text }} </li>
       <li> {{ datas[2].text }} </li> -->
 
-      <test 
+      <!-- <test 
         v-for="data in datas"
         v-bind:data="data"
         v-bind:key="data.id"
-      ></test>
+      ></test> -->
     </ul>
+    <!-- <P>{{ message }}</P> -->
+    <!-- <p v-html="message"></p> -->
+    <form v-on:submit.prevent="add">
+      <input type="text" v-model="message" ref="comment">
+      <button type="submit">追加</button>
+    </form>
   </div>
 
   <div id="app-3">
